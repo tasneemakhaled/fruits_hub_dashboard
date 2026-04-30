@@ -16,6 +16,8 @@ class _IsfeaturedcheckboxState extends State<Isfeaturedcheckbox> {
   Widget build(BuildContext context) {
     return Row(
       children: [
+        Text('is Featured Item?'),
+        Spacer(),
         CustomCheckBox(
           onChanged: (value) {
             isFeatured = value;
@@ -24,9 +26,6 @@ class _IsfeaturedcheckboxState extends State<Isfeaturedcheckbox> {
           },
           isChecked: isFeatured,
         ),
-        SizedBox(width: 10),
-
-        Expanded(child: Text('is Featured?')),
       ],
     );
   }
