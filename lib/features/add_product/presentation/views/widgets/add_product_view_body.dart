@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub_dashboard/core/utils/widgets/custom_text_field.dart';
 import 'package:fruits_hub_dashboard/features/add_product/presentation/views/widgets/image_field.dart';
+import 'package:fruits_hub_dashboard/features/add_product/presentation/views/widgets/custom_checkbox.dart';
+import 'package:fruits_hub_dashboard/features/add_product/presentation/views/widgets/isFeaturedCheckBox.dart';
 
 class AddProductViewBody extends StatefulWidget {
   const AddProductViewBody({super.key});
@@ -12,6 +14,7 @@ class AddProductViewBody extends StatefulWidget {
 class _AddProductViewBodyState extends State<AddProductViewBody> {
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
+  bool isFeatured = false;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -44,7 +47,14 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
                 maxLines: 5,
               ),
               SizedBox(height: 16),
-              ImageField(),
+              Isfeaturedcheckbox(
+                onChanged: (value) {
+                  // isFeatured = value;
+                  // setState(() {});
+                },
+              ),
+              SizedBox(height: 16),
+              ImageField(onFileChanged: (image) {}),
             ],
           ),
         ),
