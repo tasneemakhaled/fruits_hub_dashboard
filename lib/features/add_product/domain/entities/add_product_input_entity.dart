@@ -6,7 +6,7 @@ class AddProductInputEntity {
   final String code;
   final num price;
   final File image;
-  final String? imageUrl;
+  String? imageUrl;
   final bool isFeatured;
 
   AddProductInputEntity({
