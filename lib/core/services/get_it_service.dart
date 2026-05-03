@@ -8,9 +8,10 @@ import 'package:fruits_hub_dashboard/core/services/firestore_service.dart';
 import 'package:fruits_hub_dashboard/core/services/storage_service.dart';
 import 'package:get_it/get_it.dart';
 
+final getIt = GetIt.instance;
+
 class GetitService {
-  final getIt = GetIt.instance;
-  void setUpGetIt() {
+  static void setUpGetIt() {
     getIt.registerSingleton<StorageService>(FireStorage());
     getIt.registerSingleton<ImagesRepo>(
       ImagesRepoImpl(storageService: getIt.get<StorageService>()),
