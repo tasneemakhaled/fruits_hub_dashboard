@@ -1,3 +1,5 @@
+import 'dart:io';
+
 abstract class StorageService {
-  Future<String> uploadFile(String file); // base64
+  Future<String> uploadFile(File file, String refrence); // base64
 }
