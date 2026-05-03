@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:fruits_hub_dashboard/features/add_product/domain/entities/add_product_input_entity.dart';
 
-class AddProductEntityModel {
+class AddProductInputModel {
   final String name;
   final String description;
   final String code;
@@ -10,8 +10,13 @@ class AddProductEntityModel {
   final File image;
   String? imageUrl;
   final bool isFeatured;
-
-  AddProductEntityModel({
+  final int expirationMonths;
+  bool isOrganic = false;
+  final int numOfCalories;
+  final int unitAmount;
+  final num avgRating = 0;
+  final num ratingCount = 0;
+  AddProductInputModel({
     required this.name,
     required this.description,
     required this.code,
@@ -19,11 +24,15 @@ class AddProductEntityModel {
     required this.image,
     this.imageUrl,
     required this.isFeatured,
+    required this.expirationMonths,
+    required this.numOfCalories,
+    required this.unitAmount,
+    required this.isOrganic,
   });
-  factory AddProductEntityModel.fromEntity(
+  factory AddProductInputModel.fromEntity(
     AddProductInputEntity addProductInputEntity,
   ) {
-    return AddProductEntityModel(
+    return AddProductInputModel(
       name: addProductInputEntity.name,
       description: addProductInputEntity.description,
       code: addProductInputEntity.code,
@@ -31,6 +40,10 @@ class AddProductEntityModel {
       image: addProductInputEntity.image,
       isFeatured: addProductInputEntity.isFeatured,
       imageUrl: addProductInputEntity.imageUrl,
+      expirationMonths: addProductInputEntity.expirationMonths,
+      numOfCalories: addProductInputEntity.numOfCalories,
+      unitAmount: addProductInputEntity.unitAmount,
+      isOrganic: addProductInputEntity.isOrganic,
     );
   }
   toMap() {
@@ -42,6 +55,10 @@ class AddProductEntityModel {
       // 'image': image,
       'isFeatured': isFeatured,
       'imageUrl': imageUrl,
+      'expirationMonths': expirationMonths,
+      'numOfCalories': numOfCalories,
+      'unitAmount': unitAmount,
+      'isOrganic': isOrganic,
     };
   }
 }
