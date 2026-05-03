@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub_dashboard/features/add_product/presentation/add_product_view.dart';
-import 'package:fruits_hub_dashboard/features/views/widgets/custom_button.dart';
+import 'package:fruits_hub_dashboard/features/dashboard/views/widgets/custom_button.dart';
 
 class DashboardViewBody extends StatelessWidget {
   const DashboardViewBody({super.key});

@@ -6,7 +6,7 @@ import 'package:fruits_hub_dashboard/features/add_product/domain/entities/add_pr
 import 'package:fruits_hub_dashboard/features/add_product/presentation/views/widgets/image_field.dart';
 import 'package:fruits_hub_dashboard/features/add_product/presentation/views/widgets/custom_checkbox.dart';
 import 'package:fruits_hub_dashboard/features/add_product/presentation/views/widgets/isFeaturedCheckBox.dart';
-import 'package:fruits_hub_dashboard/features/views/widgets/custom_button.dart';
+import 'package:fruits_hub_dashboard/features/dashboard/views/widgets/custom_button.dart';
 
 class AddProductViewBody extends StatefulWidget {
   const AddProductViewBody({super.key});
