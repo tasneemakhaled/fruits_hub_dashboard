@@ -39,7 +39,7 @@ class AddProductEntityModel {
       'description': description,
       'code': code,
       'price': price,
-      'image': image,
+      // 'image': image,
       'isFeatured': isFeatured,
       'imageUrl': imageUrl,
     };
