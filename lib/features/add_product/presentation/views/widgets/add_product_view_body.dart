@@ -86,6 +86,7 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
                 hintText: 'Unit Amount',
                 keyboardType: TextInputType.number,
               ),
+              SizedBox(height: 16),
               CustomTextField(
                 onSaved: (value) {
                   description = value!;
@@ -100,6 +101,7 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
                   isFeatured = value;
                 },
               ),
+              SizedBox(height: 16),
               IsOrganicCheckBox(
                 onChanged: (value) {
                   isOrganic = value;
