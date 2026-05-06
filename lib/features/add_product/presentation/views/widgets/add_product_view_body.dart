@@ -48,7 +48,7 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
               SizedBox(height: 16),
               CustomTextField(
                 onSaved: (value) {
-                  price = value! as num;
+                  price = num.parse(value!);
                 },
                 hintText: 'Product Price',
                 keyboardType: TextInputType.number,
@@ -60,12 +60,11 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
                   code = value!.toLowerCase();
                 },
                 hintText: 'Product Code',
-                keyboardType: TextInputType.number,
               ),
               SizedBox(height: 16),
               CustomTextField(
                 onSaved: (value) {
-                  expirationMonths = value! as int;
+                  expirationMonths = int.parse(value!);
                 },
                 hintText: 'Expiration Months',
                 keyboardType: TextInputType.number,
@@ -73,7 +72,7 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
               SizedBox(height: 16),
               CustomTextField(
                 onSaved: (value) {
-                  numOfCalories = value! as int;
+                  numOfCalories = int.parse(value!);
                 },
                 hintText: 'Num Of Calories',
                 keyboardType: TextInputType.number,
@@ -81,7 +80,7 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
               SizedBox(height: 16),
               CustomTextField(
                 onSaved: (value) {
-                  unitAmount = value! as int;
+                  unitAmount = int.parse(value!);
                 },
                 hintText: 'Unit Amount',
                 keyboardType: TextInputType.number,

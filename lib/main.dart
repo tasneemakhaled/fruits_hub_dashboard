@@ -5,11 +5,8 @@ import 'package:fruits_hub_dashboard/core/helper_functions/on_generate_routes.da
 import 'package:fruits_hub_dashboard/core/services/custom_bloc_observer.dart';
 import 'package:fruits_hub_dashboard/core/services/get_it_service.dart';
 import 'package:fruits_hub_dashboard/core/services/supabase_storage._service.dart';
-
-import 'package:fruits_hub_dashboard/core/utils/constants/constants.dart';
 import 'package:fruits_hub_dashboard/features/dashboard/views/dashboard_view.dart';
 import 'package:fruits_hub_dashboard/firebase_options.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
